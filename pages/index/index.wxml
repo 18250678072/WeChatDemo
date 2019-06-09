@@ -1,0 +1,23 @@
+<view class="slider">
+  <swiper indicator-dots="true" autoplay="{{ true }}" interval="2500" duration="500" circular='{{ true }}'>
+    <swiper-item wx:for="{{ sliderList }}" wx:key="id">
+      <image src="{{ item.image }}" width="355" height="150" mode="aspectFill" lazy-load/>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='kind bgw'>
+  <navigator class='kind-item' url='/pages/shopList/shopList?cat={{ item.id }}&title={{ item.name }}' wx:for="{{ navList }}" wx:key="id">
+    <image src='{{ item.icon }}' lazy-load></image>
+    <text>{{ item.name }}</text>
+  </navigator>
+</view>
+
+<view class='index-enter mt20 bgw'>
+  <navigator class='enter-item'>
+    <image src='/assets/images/link-01.png'></image>
+  </navigator>
+  <navigator class='enter-item'>
+    <image src='/assets/images/link-02.png'></image>
+  </navigator>
+</view>
